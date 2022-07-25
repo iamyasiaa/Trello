@@ -1,4 +1,4 @@
 export const ROUTES = {
-  Main: "/",
+  Main: "/Trello/",
   Id: "/:Id",
 };
