@@ -1,0 +1,35 @@
+.createButton {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .createModal {
+    display: flex;
+    flex-direction: column;
+
+    .modalInput {
+      width: 333px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .modalTitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 3px mediumslateblue double;
+      margin: 0 auto;
+      color: mediumslateblue;
+      font-size: 40px;
+      width: 100%;
+    }
+    .modalButtonBlock {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding-top: 50px;
+      padding-bottom: 30px;
+    }
+  }
+}

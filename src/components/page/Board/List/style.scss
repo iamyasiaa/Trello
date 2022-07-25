@@ -1,0 +1,150 @@
+.boardName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: mediumslateblue;
+  font-size: 30px;
+  width: 100%;
+}
+.createListButton {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxForList {
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: plum;
+  padding-bottom: 30px;
+}
+
+.listBoard {
+  background-color: plum;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  cursor: grab;
+
+  position: relative;
+
+  .listName {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: mediumslateblue;
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+
+  .noActive {
+    text-decoration: line-through;
+    background-color: #dcd9d9 !important;
+  }
+
+  .tasks {
+    background-color: #fcf9f9;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    color: plum;
+    position: relative;
+
+    .deleteTask {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 0px;
+      right: 0px;
+      cursor: pointer;
+      color: mediumslateblue;
+    }
+    .checkTask {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      bottom: 0px;
+      right: 7px;
+      cursor: pointer;
+      color: mediumslateblue;
+    }
+  }
+
+  .tasksArray {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .listIcon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .createTaskButton {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.createListModal {
+  display: flex;
+  flex-direction: column;
+
+  .modalListInput {
+    width: 333px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .modalListTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px mediumslateblue double;
+    margin: 0 auto;
+    color: mediumslateblue;
+    font-size: 40px;
+    width: 100%;
+  }
+  .createListButton {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+}
+.createTaskModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modalTaskInput {
+    width: 333px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .modalTaskTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px mediumslateblue double;
+    margin: 0 auto;
+    color: mediumslateblue;
+    font-size: 40px;
+    width: 100%;
+  }
+}

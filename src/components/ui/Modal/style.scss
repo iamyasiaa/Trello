@@ -1,0 +1,21 @@
+.modal {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  padding-top: 40px;
+  overflow: auto;
+  .modalBody {
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    width: 480px;
+    margin: 0 auto;
+  }
+}
