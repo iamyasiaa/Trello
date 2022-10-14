@@ -1,20 +1,20 @@
-.createButton {
+.create-board {
   padding-top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  .createModal {
+  .modal-board {
     display: flex;
     flex-direction: column;
-
-    .modalInput {
+  
+    &__input {
       width: 333px;
       margin: 0 auto;
       padding-top: 50px;
     }
-
-    .modalTitle {
+    
+    &__title {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -24,7 +24,8 @@
       font-size: 40px;
       width: 100%;
     }
-    .modalButtonBlock {
+    
+    &__buttons {
       display: flex;
       justify-content: center;
       gap: 30px;
@@ -32,4 +33,7 @@
       padding-bottom: 30px;
     }
   }
+  
 }
+
+

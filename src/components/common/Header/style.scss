@@ -4,12 +4,20 @@
   padding-top: 30px;
   padding-bottom: 20px;
 
-  .headerTitle {
+  &__title {
     color: mediumslateblue;
     font-size: 80px;
   }
 
-  .headerBody {
+  &__button {
+    font-size: 80px;
+    color: mediumslateblue;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+  }
+
+  &__body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,13 +25,5 @@
     width: 500px;
     margin: 0 auto;
     position: relative;
-
-    .buttonBack {
-      font-size: 80px;
-      color: mediumslateblue;
-      cursor: pointer;
-      position: absolute;
-      left: 0;
-    }
   }
 }

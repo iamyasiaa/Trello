@@ -37,13 +37,13 @@ export default function CreateBord() {
   };
 
   return (
-    <div className="createButton">
+    <div className="create-board">
       <Button onClick={onOpen}>CREATE</Button>
       {modal && (
         <Modal active={modal} onClose={onClose}>
-          <div className="createModal">
-            <div className="modalTitle">Creating a board</div>
-            <div className="modalInput">
+          <div className="modal-board">
+            <div className="modal-board__title">Creating a board</div>
+            <div className="modal-board__input">
               <Input
                 handleChange={handleChange}
                 placeholder="Enter the title"
@@ -51,7 +51,7 @@ export default function CreateBord() {
                 value={name}
               />
             </div>
-            <div className="modalButtonBlock">
+            <div className="modal-board__buttons">
               <Button onClick={createBoard}>CREATE</Button>
               <Button onClick={onClose}>BACK</Button>
             </div>

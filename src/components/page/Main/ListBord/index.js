@@ -61,10 +61,10 @@ export default function ListBord() {
 
   return (
     <div>
-      <div className="listBoardName">
+      <div className="list-board">
         {listBoard?.length ? "List Board" : "No List Board"}
       </div>
-      <div className="boxForListBoard">
+      <div className="list-board__body">
         {listBoard?.map((item) => (
           <div
             className="board"
@@ -77,9 +77,9 @@ export default function ListBord() {
             onDrop={(event) => dragHandler(event, item)}
             draggable={true}
           >
-            <div className="boardName">{item?.name}</div>
+            <div className="board__name">{item?.name}</div>
             <div
-              className="boardIcon"
+              className="board__icon"
               onClick={(ev) => onClickRemoteBoard(ev, item.id)}
             >
               <svg

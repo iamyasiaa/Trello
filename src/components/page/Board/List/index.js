@@ -208,11 +208,11 @@ export default function ListBord() {
 
   return (
     <div>
-      <div className="boardName">{currentBoard.name}</div>
-      <div className="boxForList">
+      <div className="page-list">{currentBoard.name}</div>
+      <div className="page-list__body">
         {currentBoard.list.map((item) => (
           <div
-            className="listBoard"
+            className="list"
             key={item.id}
             onDragStart={(event) => dragOverListStart(event, item)}
             onDragOver={dragOverHandler}
@@ -221,13 +221,13 @@ export default function ListBord() {
             onDrop={(event) => dragListHandler(event, item)}
             draggable={true}
           >
-            <div className="listName">{item.name}</div>
-            <div className="tasksArray">
+            <div className="list__name">{item.name}</div>
+            <div className="list__tasks">
               {item?.tasks?.map((el) => (
                 <div
                   className={classNames(
-                    "tasks",
-                    el.isActive === false && "noActive"
+                    "list__item",
+                    el.isActive === false && "list__item--active"
                   )}
                   key={el.id}
                   onDragStart={(event) => dragOverTaskStart(event, el, item)}
@@ -238,7 +238,7 @@ export default function ListBord() {
                   draggable={true}
                 >
                   <div
-                    className="deleteTask"
+                    className="list__item-delete"
                     onClick={() => onClickDeleteTask(item.id, el.id)}
                   >
                     <svg
@@ -255,7 +255,7 @@ export default function ListBord() {
                     </svg>
                   </div>
                   <div
-                    className="checkTask"
+                    className="list__item-check"
                     onClick={() => onClickCheckTask(item.id, el.id)}
                   >
                     <svg
@@ -274,11 +274,11 @@ export default function ListBord() {
                 </div>
               ))}
             </div>
-            <div className="createTaskButton">
+            <div className="list__item-create">
               <Button onClick={() => onOpenTask(item.id)}>CREATE</Button>
             </div>
             <div
-              className="listIcon"
+              className="list__icon"
               onClick={() => onClickDeleteList(item.id)}
             >
               <svg
@@ -296,15 +296,15 @@ export default function ListBord() {
             </div>
           </div>
         ))}
-        <div className="createListButton">
+        <div className="list__create">
           <Button onClick={onOpenList}>CREATE</Button>
         </div>
       </div>
       {modalList && (
         <Modal active={modalList} onClose={onCloseList}>
-          <div className="createListModal">
-            <div className="modalListTitle">Creating a list</div>
-            <div className="modalListInput">
+          <div className="modal-list">
+            <div className="modal-list__title">Creating a list</div>
+            <div className="modal-list__input">
               <Input
                 handleChange={handleChangeList}
                 placeholder="Enter the title"
@@ -312,7 +312,7 @@ export default function ListBord() {
                 value={nameList}
               />
             </div>
-            <div className="createListButton">
+            <div className="modal-list__buttons">
               <Button onClick={createList}>CREATE</Button>
               <Button onClick={onCloseList}>BACK</Button>
             </div>
@@ -321,9 +321,9 @@ export default function ListBord() {
       )}
       {modalTask && (
         <Modal active={modalTask} onClose={onCloseTask}>
-          <div className="createListModal">
-            <div className="modalListTitle">Creating a task</div>
-            <div className="modalListInput">
+          <div className="modal-list">
+            <div className="modal-list__title">Creating a task</div>
+            <div className="modal-list__input">
               <Input
                 handleChange={handleChangeTask}
                 placeholder="Enter the task"
@@ -331,7 +331,7 @@ export default function ListBord() {
                 value={nameTask}
               />
             </div>
-            <div className="createListButton">
+            <div className="modal-list__buttons">
               <Button onClick={createTask}>CREATE</Button>
               <Button onClick={onCloseTask}>BACK</Button>
             </div>

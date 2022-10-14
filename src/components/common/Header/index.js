@@ -15,14 +15,14 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="headerBody">
+      <div className="header__body">
         {location?.pathname !== ROUTES.Main && (
-          <div className="buttonBack" onClick={onClickBack}>
+          <div className="header__button" onClick={onClickBack}>
             {"<"}
           </div>
         )}
 
-        <h1 className="headerTitle">TRELLO</h1>
+        <h1 className="header__title">TRELLO</h1>
       </div>
     </header>
   );
